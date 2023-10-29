@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$y+0ozimv@20r$!&6p^je8%w^we&d^0_z=2wqji97v=%9gxn!)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
@@ -69,6 +70,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
+
+# CSRF_TRUSTED_ORIGINS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://*.onrender.com','https://*.127.0.0.1']
+CSRF_COOKIE_SECURE=False
+
+# Set this to 'None' to allow cross-site requests for cookies
+SESSION_COOKIE_SAMESITE='None'
+
+# Set this to True to require HTTPS for cookies (only if you're using HTTPS)
+SESSION_COOKIE_SECURE = True
 
 
 # Database

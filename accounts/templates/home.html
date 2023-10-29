@@ -20,19 +20,19 @@
           <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="option nav-link" href="#">HOME</a>
+                <a href = "#hero_scroll" class="option nav-link">HOME</a>
               </li>
               <li class="nav-item">
-                <a class="option nav-link" href="#">ABOUT</a>
+                <a href = "#about_scroll" class="option nav-link">ABOUT</a>
               </li>
               <li class="nav-item">
-                <a class="option nav-link" href="#">WORK</a>
+                <a href = "#work_scroll" class="option nav-link">WORK</a>
               </li>
               <li class="nav-item">
-                <a class="option nav-link" href="#">CONTACT</a>
+                <a href = "#contact_scroll" class="option nav-link">CONTACT</a>
               </li>
               <li class="nav-item">
-                <a class="option nav-link" href="#">RESUME</a>
+                <a href = "https://drive.google.com/uc?export=download&id=1qEcTqVNpLPW_6QOk_r39R148tG_0rhi2" class="option nav-link">RESUME</a>
               </li>
             </ul>
           </div>
@@ -43,12 +43,12 @@
 
     <!--Hero Starts-->
 
-    <section class="hero">
+    <section id = "hero_scroll" class="hero">
         <div class="container text-center justify-content-center hero d-flex align-items-center">
           <div>
-            <p class = "hero_first">Hello, I am</p>
-            <h1 class = "hero_second">Shoaib Mustafa</h1>
-            <h5 class = "hero_third">I am a Software Developer</h5>
+            <p class = "hero_first hero_title">Hello, I am</p>
+            <h1 class = "hero_second hero_title">Shoaib Mustafa</h1>
+            <h5 class = "hero_third hero_title">I am a Software Developer</h5>
           </div>
         </div>
     </section>
@@ -58,7 +58,7 @@
 
     <!--About Me Starts-->
 
-    <section class = "about">
+    <section id = "about_scroll" class = "about">
         <div class="container">
           <h1 class="aboutheader text-center my-5">
             ABOUT
@@ -70,9 +70,9 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-grid gap-2">
-                    <button type="button" class="btn btn-dark" id = "objective">Objective</button>
-                    <button type="button" class="btn btn-dark" id = "personal">Personal</button>
-                    <button type="button" class="btn btn-dark" id = "education">Education</button>
+                    <button type="button" class="obj_button btn btn-dark" id = "objective">Objective</button>
+                    <button type="button" class="per_button btn btn-dark" id = "personal">Personal</button>
+                    <button type="button" class="edu_button btn btn-dark" id = "education">Education</button>
                   </div>
                 </div>
               </div>
@@ -80,7 +80,7 @@
             <div class="col-sm-6">
               <div class="card">
                 <div class="card-body">
-                  <p id="aboutparagraph">Objective What is Lorem Ipsum?
+                  <p id="aboutparagraph" class="aboutme_paragraph">Objective What is Lorem Ipsum?
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                     scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
@@ -100,7 +100,7 @@
 
     <!--Work Section Starts-->
 
-    <section class = "work">
+    <section id = "work_scroll" class = "work">
         <div class = "container">
             <h1 class="workheader text-center my-5">
                 WORK
@@ -191,9 +191,10 @@
     <!--Work Section Ends-->
 
 
+
     <!--Contact Me Starts-->
 
-    <section class = "contact">
+    <section id = "contact_scroll" class = "contact">
         <div class = "container-fluid row">
             <h1 class="contactheader text-center my-5">
                 CONTACT
@@ -318,14 +319,29 @@
         });
 
         $('#objective').click(function(){
+
+          $('#objective').css("color", "white");
+          $('#personal').css("color", "gray");
+          $('#education').css("color", "gray");
+
           $("#aboutparagraph").text("Objective What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
         });
 
         $('#personal').click(function(){
+
+          $('#objective').css("color", "gray");
+          $('#personal').css("color", "white");
+          $('#education').css("color", "gray");
+          
           $("#aboutparagraph").text("Personal What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
         });
 
         $('#education').click(function(){
+
+          $('#objective').css("color", "gray");
+          $('#personal').css("color", "gray");
+          $('#education').css("color", "white");
+
           $("#aboutparagraph").text("Education What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
         });
 
@@ -341,6 +357,7 @@
         navbarEl.classList.remove('navbar-scrolled');
       }
       });
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

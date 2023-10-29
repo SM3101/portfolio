@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 /*Navbar*/
 .navbar{
     transition: all 0.5s;
@@ -20,6 +24,7 @@
 .hero{
     height: 90vh;
     background-image: url(pexels-photo-91227.jpeg);
+    filter: brightness(50%);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -32,6 +37,7 @@
 
 .hero_second{
     font-size: 80px;
+    color: wheat;
 }
 
 .hero_third{
@@ -39,6 +45,11 @@
     font-size: 20px;
     font-weight: 75;
 }
+
+.hero_title{
+    filter: brightness(100%);
+}
+
 
 /*About Me*/
 .about{
@@ -61,6 +72,21 @@
     font-weight: 500;
 }
 
+.aboutme_paragraph{
+    color: #cbcbcb;
+}
+
+.obj_button{
+    color: white;
+}
+
+.per_button{
+    color: gray;
+}
+
+.edu_button{
+    color: gray;
+}
 
 /*Work Detail Section*/
 .work{
@@ -150,13 +176,52 @@
     margin-bottom: 20px;
 }
 
+/*Resume Section*/
+.resume{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    background-color: rgb(50, 55, 55);
+    color: white;
+}
 
+.resumeheader{
+    color: aliceblue;
+    font-size: 4rem;
+    font-weight: 200;
+    box-shadow: rgba(7, 7, 7, 0.25) 0px 54px 55px, rgba(117, 113, 113, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.resumeheaderRESUME{
+    color: rgb(225, 220, 85);
+    font-weight: 500;
+}
+
+.resume_image{
+    max-width: 320px;
+    float: left;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.resume_wrapper{
+    background-color:#6e6e6e;
+}
+
+.resume_text_box h2{
+    color: wheat;
+}
+
+.resume_text_box p{
+    color: #cbcbcb;
+}
 /*Contact Me Section*/
 .contact{
     padding-top: 25px;
     padding-bottom: 25px;
     text-align: center;
-    background-color: rgb(50, 55, 55);
+    background-color: rgb(67, 72, 72);
     color: white;
 }
 
@@ -192,7 +257,7 @@
 
 /*footer*/
 .foot{
-    background-color: rgb(67, 72, 72);
+    background-color: rgb(50, 55, 55);
     color: #cbcbcb;
     font-weight: 200;
     padding: 100px;

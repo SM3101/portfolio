@@ -12,5 +12,5 @@ def homepage(request):
         new_message = Message(name=name, email=email, phone=phonenumber)
         new_message.save()
 
-    print("Test")
+    #print("Test")
     return render(request, 'home.html')

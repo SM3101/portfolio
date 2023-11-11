@@ -48,7 +48,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
@@ -70,17 +69,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
-
-# CSRF_TRUSTED_ORIGINS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://*.onrender.com','https://*.127.0.0.1']
-CSRF_COOKIE_SECURE=False
-
-# Set this to 'None' to allow cross-site requests for cookies
-SESSION_COOKIE_SAMESITE='None'
-
-# Set this to True to require HTTPS for cookies (only if you're using HTTPS)
-SESSION_COOKIE_SECURE = True
-
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
